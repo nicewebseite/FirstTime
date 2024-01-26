@@ -39,13 +39,28 @@ const toggleNavbar = function () {
     document.body.classList.toggle("nav-active");
 }
 
+const closeNavbar = function () {
+    navbar.classList.remove("active");
+    overlay.classList.remove("active");
+    document.body.classList.remove("nav-active");
+}
+
 addEventOnElements(navTogglers, "click", toggleNavbar);
 
+// Selektiere alle Links in der Navbar
+const navbarLinks = document.querySelectorAll('.navbar-link');
+
+// Füge jedem Link ein Klickereignis hinzu
+navbarLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        closeNavbar(); // Schließe die Navbar
+    });
+});
 /**
  * HEADER & BACK TO TOP BTN
  */
 
-const header = document.querySelector("[data-header");
+const header = document.querySelector("[data-header]");
 const backTopBtn = document.querySelector("[data-back-top-btn]");
 
 let lastScrollPos = 0;

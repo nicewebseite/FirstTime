@@ -171,7 +171,7 @@ body {
   font-size: var(--fontSize-body-4);
   font-weight: var(--weight-regular);
   line-height: var(--lineHeight-5);
-  overflow: hidden; /** hidden, dann bleibt die scrollbar verschwunden lol */
+  overflow: hidden; /* hidden, dann bleibt die scrollbar verschwunden lol */
   height: 300vh;
 }
 
